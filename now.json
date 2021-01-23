@@ -6,7 +6,15 @@
     "builds": [
         {
             "src": "nuxt.config.js",
-            "use": "@nuxtjs/now-builder"
+            "use": "@nuxtjs/now-builder",
+            "config": {
+                "serverFiles": [
+                    "package.json",
+                    "./config/head",
+                    "./config/modules",
+                    "./config/plugins"
+                ]
+            }
         }
     ],
     "routes": [
