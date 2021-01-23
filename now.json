@@ -7,7 +7,9 @@
                 "serverFiles": [
                     "./config/head",
                     "./config/modules",
-                    "./config/plugins"
+                    "./config/plugins",
+                    "./nuxt.config.js",
+                    "./store/**"
                 ]
             }
         }
