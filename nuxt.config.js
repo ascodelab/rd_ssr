@@ -1,4 +1,4 @@
-import head from './config/head'
+//import head from './config/head'
 import { modules, buildModules, modulesSettings } from './config/modules'
 import plugins from './config/plugins'
 
@@ -9,7 +9,7 @@ export default {
     "./config/modules",
     "./config/plugins"
   ],
-  head: head,
+  //head: head,
   css: [],
   plugins: plugins,
   components: true,
