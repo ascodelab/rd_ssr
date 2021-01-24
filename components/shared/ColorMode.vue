@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     isLightMode() {
-      return this.$colorMode.preference === "light" ? true : false;
+      return this.$colorMode.preference === "dark" ? false : true;
     }
   },
   methods: {
