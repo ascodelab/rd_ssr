@@ -1,13 +1,40 @@
-import head from './config/head'
-import { modules, buildModules, modulesSettings } from './config/modules'
-import plugins from './config/plugins'
-
 export default {
-  head: head,
+  head: {
+    title: process.env.SITENAME || '',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  },
   css: [],
-  plugins: plugins,
+  plugins: [],
   components: true,
-  modules: modules,
-  buildModules: buildModules,
-  ...modulesSettings,
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxt/image',
+    'nuxt-fontawesome'
+  ],
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
+  ],
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase']
+      }
+    ]
+  },
+  axios: {},
+  build: {
+  },
+  purgeCSS: {
+    whitelist: ['dark-mode']
+  },
 }

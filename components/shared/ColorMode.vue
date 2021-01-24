@@ -1,32 +1,30 @@
 <template>
-  <div class="flex justify-between items-center" @click="changeMode">
-    <div
-      class="w-16 h-4 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out"
-      :class="{ 'bg-green': toggleActive}"
-    >
-      <div
-        class="bg-white w-8 h-5 rounded-full shadow-md transform duration-300 ease-in-out"
-        :class="{ 'translate-x-6': toggleActive,}"
-      ></div>
-    </div>
-  </div>
+  <span class="justify-between items-center cursor-pointer" @click="changeMode">
+    <span v-if="isLightMode">
+      <fa icon="sun" class="duration-700 ease-in-out" :class="{ 'text-orange-500': isLightMode,}" />
+    </span>
+    <span v-if="!isLightMode">
+      <fa
+        icon="moon"
+        class="duration-700 ease-in-out"
+        :class="{ 'text-yellow-500 ': !isLightMode,}"
+      />
+    </span>
+  </span>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      toggleActive: false
-    };
+    return {};
   },
   computed: {
-    mode() {
-      return this.$colorMode.preference === "light" ? "dark" : "light";
+    isLightMode() {
+      return this.$colorMode.preference === "light" ? true : false;
     }
   },
   methods: {
     changeMode() {
-      this.toggleActive = !this.toggleActive;
       this.$colorMode.preference =
         this.$colorMode.preference === "light" ? "dark" : "light";
     }

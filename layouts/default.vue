@@ -11,10 +11,10 @@
 </template>
 <style lang="postcss">
 .dark-mode {
-  @apply bg-gray-900 text-white;
+  @apply bg-gray-800 text-gray-100;
 }
 
 .light-mode {
-  @apply bg-gray-100 text-black;
+  @apply bg-gray-100 text-gray-800;
 }
 </style>
