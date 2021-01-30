@@ -1,6 +1,9 @@
 /* ~/assets/css/tailwind.css */
-@import './variables.css'; /* Our custom palettes */
+@import './scss/theme/variables.scss'; /* Our custom palettes */
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'tailwindcss/screens';
+
+

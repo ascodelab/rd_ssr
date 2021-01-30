@@ -2,8 +2,12 @@
   <header class="lg:px-16 px-6 flex flex-wrap items-center lg:py-0 py-2">
     <div class="flex-1 flex justify-between items-center">
       <!-- logo as per dark/light theme -->
-      <img v-if="isLightMode" src="/img/logo-white.png" />
-      <img v-else src="/img/logo-black.png" />
+      <NuxtLink v-if="isLightMode" :to="home">
+        <img src="/img/logo-white.png" />
+      </NuxtLink>
+      <NuxtLink v-else :to="home">
+        <img src="/img/logo-black.png" />
+      </NuxtLink>
       <!-- logo ends -->
     </div>
     <label for="menu-toggle" class="pointer-cursor lg:hidden block">
@@ -25,7 +29,9 @@
             <a
               class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
               href="https://me.ratidigital.in"
-            >Portfolio</a>
+            >
+              <fa icon="briefcase" class="mr-1 text-gray-600 dark:text-gray-200"></fa>Portfolio
+            </a>
           </li>
           <li>
             <a
@@ -38,25 +44,15 @@
           </li>
         </ul>
       </nav>
-      <a
-        href="https://www.linkedin.com/in/realanilsharma"
-        class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor"
-      >
-        <img
-          class="rounded-full w-10 h-10 border-2 border-transparent hover:border-indigo-400"
-          src="https://s.gravatar.com/avatar/017c2f452a5b71e2bb49cd8932d42e74?s=80"
-          alt="Anil Sharma | Software Engineer"
-        />
-      </a>
     </div>
   </header>
 </template>
 <style lang="postcss" scoped>
-.dark-mode header {
-  @apply bg-black text-gray-200;
-}
 .light-mode header {
-  @apply bg-white text-gray-700;
+  @apply bg-white text-gray-700 border-b border-gray-200;
+}
+.dark-mode header {
+  @apply bg-black text-gray-200 border-b border-gray-700;
 }
 </style>
 
@@ -66,6 +62,9 @@ export default {
     return {};
   },
   computed: {
+    home() {
+      return "/";
+    },
     isLightMode() {
       return this.$colorMode.preference === "dark" ? false : true;
     }

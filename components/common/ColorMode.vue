@@ -4,7 +4,11 @@
       v-if="isLightMode"
       class="rounded-full bg-gray-100 text-gray-800 px-3 py-2 transition-colors duration-300 ease-linear"
     >
-      <fa icon="sun" class="duration-700 ease-in-out" :class="{ 'text-orange-500': isLightMode,}" />&nbsp;Light
+      <fa
+        icon="sun"
+        class="duration-700 ease-in-out fa-spin text-yellow-700"
+        :class="{ 'text-orange-500': isLightMode,}"
+      />&nbsp;Light
     </span>
     <span
       v-if="!isLightMode"
@@ -12,7 +16,7 @@
     >
       <fa
         icon="moon"
-        class="duration-700 ease-in-out"
+        class="duration-700 ease-in-out animate-pulse"
         :class="{ 'text-yellow-500 ': !isLightMode,}"
       />&nbsp;Dark
     </span>

@@ -4,17 +4,19 @@
  ** Docs: https://tailwindcss.com/docs/configuration
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
+const colors = require('tailwindcss/colors')
 module.exports = {
     theme: {
-        extend: {
-            colors: {
-                green: {
-                    default: "var(--green-default)",
-                    yellow: "var(--green-yellow)",
-                    lime: "var(--green-lime)",
-                    olive: "var(--green-olive)"
-                }
-            }
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            black: colors.black,
+            white: colors.white,
+            gray: colors.trueGray,
+            indigo: colors.indigo,
+            red: colors.rose,
+            yellow: colors.amber,
+            blue: colors.lightBlue,
         },
         darkSelector: ".dark-mode"
     },

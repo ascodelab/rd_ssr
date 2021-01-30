@@ -1,4 +1,12 @@
 export default {
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL,
+    apiURL: process.env.API_URL,
+    imagePath: process.env.IMAGE_PATH,
+    axios: {
+      browserBaseURL: process.env.API_URL
+    }
+  },
   head: {
     title: process.env.SITENAME || '',
     meta: [
@@ -11,7 +19,7 @@ export default {
     ]
   },
   css: [],
-  plugins: [],
+  plugins: ['~/plugins/vov'],
   components: true,
   modules: [
     '@nuxtjs/axios',
@@ -27,7 +35,7 @@ export default {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase']
+        icons: ['faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase', 'faQuestion', 'faCalendar', 'faTags', 'faList', 'faClock']
       }
     ]
   },

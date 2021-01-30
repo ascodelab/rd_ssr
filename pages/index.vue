@@ -1,8 +1,6 @@
 <template>
-  <div class="flex justify-between container mx-auto">
+  <div class="py-6 flex justify-between container mx-auto">
     <div class="w-full lg:w-8/12">
-      <!-- dropdown component -->
-      <Search />
       <!-- post card ccomponent -->
       <ArticleList />
     </div>
@@ -16,14 +14,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import { mapMutations, mapState } from "vuex";
-export default {
-  computed: {
-    ...mapState("modules/article", {
-      articles: state => state.articles
-    })
-  }
-};
-</script>
