@@ -24,7 +24,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxt/image',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxt/content'
   ],
   buildModules: [
     '@nuxtjs/tailwindcss',
