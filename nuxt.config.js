@@ -23,12 +23,12 @@ export default {
   components: true,
   modules: [
     '@nuxtjs/axios',
-    '@nuxt/image',
     'nuxt-fontawesome',
     '@nuxt/content'
   ],
   buildModules: [
     '@nuxtjs/tailwindcss',
+    '@nuxt/image',
     '@nuxtjs/color-mode'
   ],
   fontawesome: {

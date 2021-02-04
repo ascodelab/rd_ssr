@@ -2,7 +2,7 @@
   <div class="post-card">
     <!-- section -->
     <section>
-      <img class="rounded-lg object-fill" :src="getFeatureImage" :alt="postTitle" />
+      <nuxt-img :src="featureImage" loading="lazy" fit="cover" quality="80" />
       <NuxtLink class="px-4 py-8" :to="getArticleUrl">{{postTitle}}</NuxtLink>
       <p class="text-sm text-gray-600 p-4">{{postDescription}}</p>
     </section>
@@ -45,7 +45,7 @@ export default {
   ],
   computed: {
     getFeatureImage() {
-      return `https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80`;
+      return this.featureImage;
     },
     getArticleUrl() {
       return `${this.postLink}`;
