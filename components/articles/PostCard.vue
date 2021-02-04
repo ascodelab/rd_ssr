@@ -2,7 +2,7 @@
   <div class="post-card">
     <!-- section -->
     <section>
-      <nuxt-img :src="featureImage" loading="lazy" fit="cover" quality="80" />
+      <img :src="featureImage" />
       <NuxtLink class="px-4 py-8" :to="getArticleUrl">{{postTitle}}</NuxtLink>
       <p class="text-sm text-gray-600 p-4">{{postDescription}}</p>
     </section>
