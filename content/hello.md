@@ -1,6 +1,6 @@
 ---
 title: Nuxt Content + TailwindCSS Typography
-video: https://www.youtube.com/embed/7YZ5DwlLSt8
+video: 7YZ5DwlLSt8
 ---
 
 <p className="lead">
