@@ -1,9 +1,8 @@
 ---
 title: Newsletter Signup
 subtitle: Awake Integrates with Mailchimp for Easy Newsletter Management
-category:
-  - Third Party Integrations
-author: Daniel Kelly
+category: Technology
+author: Anil Sharma
 date: 2019-08-04T04:27:56.800Z
 slug : newsletter-signup
 featureImage: /uploads/mailchimp.jpg

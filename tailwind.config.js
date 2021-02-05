@@ -17,6 +17,7 @@ module.exports = {
             red: colors.rose,
             yellow: colors.amber,
             blue: colors.lightBlue,
+            'rd-theme': '#d47192',
         },
         darkSelector: ".dark-mode"
     },

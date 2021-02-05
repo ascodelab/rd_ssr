@@ -1,9 +1,8 @@
 ---
 title: Light CSS Footprint
 subtitle: Purge CSS Bundles Only the Required CSS
-category:
-  - About Awake
-author: Daniel Kelly
+category: Technology
+author: Anil Sharma
 date: 2019-08-05T04:27:56.800Z
 slug : light-css-footprint
 featureImage: /uploads/purge-css-hero.jpg

@@ -30,7 +30,7 @@
               class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
               href="https://me.ratidigital.in"
             >
-              <fa icon="briefcase" class="mr-1 text-gray-600 dark:text-gray-200"></fa>Portfolio
+              <fa icon="briefcase" class="mr-1 text-rd-theme dark:text-gray-200"></fa>Portfolio
             </a>
           </li>
           <li>
@@ -49,7 +49,7 @@
 </template>
 <style lang="postcss" scoped>
 .light-mode header {
-  @apply bg-white text-gray-700 border-b border-gray-200;
+  @apply bg-white text-rd-theme border-b border-gray-200;
 }
 .dark-mode header {
   @apply bg-black text-gray-200 border-b border-gray-700;

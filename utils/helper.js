@@ -1,17 +1,17 @@
 export const getFormattedDate = (date) => {
     const months = [
-        'January',
-        'February',
+        'Jan',
+        'Feb',
         'March',
         'April',
         'May',
         'June',
         'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nove',
+        'Dece'
     ]
     const dateObj = new Date(date)
     return `${

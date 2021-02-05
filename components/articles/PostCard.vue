@@ -1,33 +1,45 @@
 <template>
   <div class="post-card">
+    <!-- category -->
+    <div class="cat-div">
+      <theme-button class="btn-theme">{{ postCategory }}</theme-button>
+    </div>
+
     <!-- section -->
     <section>
-      <img :src="featureImage" />
+      <img :src="featureImage" :alt="postTitle" :title="postTitle" />
       <NuxtLink class="px-4 py-8" :to="getArticleUrl">{{postTitle}}</NuxtLink>
       <p class="text-sm text-gray-600 p-4">{{postDescription}}</p>
     </section>
     <!-- footer -->
-    <footer class="p-4">
+    <footer>
       <a href="https://me.ratidigital.in" class="flex items-center">
         <img :src="publisherImage" :alt="publisherName" class="post-card-author-img" />
         {{ publisherName }}
       </a>
-      <a href="#" class="float-">
-        <img src="https://img.icons8.com/flat_round/24/000000/share--v1.png" />
-      </a>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/offices/20/000000/calendar.png" />
+        <span class="pl-1">{{ datePretty }}</span>
+      </div>
     </footer>
   </div>
 </template>
 
 <style lang="postcss" scoped>
 .post-card {
-  @apply max-w-4xl p-2 bg-white text-gray-800 rounded-lg shadow-2xl cursor-pointer transform transition duration-500 hover:scale-105;
+  @apply max-w-4xl p-2 bg-white text-gray-800 rounded-lg shadow-2xl cursor-pointer transform transition duration-500 h-full hover:scale-105;
+}
+.cat-div {
+  @apply flex items-center justify-center;
+}
+.btn-cat {
+  @apply bg-rd-theme rounded-3xl font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6;
 }
 .post-card-author-img {
-  @apply mr-2 w-6 h-6 object-cover rounded-full;
+  @apply mr-2 w-6 h-6 object-cover rounded-full border border-yellow-900 p-1;
 }
 footer {
-  @apply border-t border-red-900;
+  @apply flex justify-between items-center p-4 border-t border-red-900 text-rd-theme;
 }
 </style>
 <script>

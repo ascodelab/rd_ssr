@@ -1,9 +1,8 @@
 ---
 title: Getting Started
 subtitle: Get Up and Running with Awake
-category:
-  - About Awake
-author: Daniel Kelly
+category: Technology
+author: Anil Sharma
 date: 2019-08-06T04:27:56.800Z
 slug : getting-started-with-awake
 featureImage: /uploads/getting-started-hero.jpg

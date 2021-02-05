@@ -1,9 +1,8 @@
 ---
 title: Post Markup And Formatting
 subtitle: All the Tags You Need to Make Clean and Expressive Posts
-category:
-  - About Awake
-author: Daniel Kelly
+category: Technology
+author: Anil Sharma
 date: 2019-08-03T04:27:56.800Z
 slug : post-markup-and-formatting
 featureImage: /uploads/markup-hero.jpg

@@ -1,6 +1,6 @@
 <template>
   <div class="w-al">
-    <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-6">
+    <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-y-10 gap-x-6 flex-1">
       <article v-for="(article, index) in articleList" :key="index">
         <post-card
           :postTitle="article.title"
@@ -19,7 +19,7 @@
 </template>
 <style lang="postcss" scoped>
 .w-al {
-  @apply flex justify-center mx-4 my-8;
+  @apply flex justify-center mx-4 my-16;
 }
 </style>
 <script>
@@ -35,8 +35,10 @@ export default {
   },
   methods: {
     async fetchData() {
+      //const response = await this.$axios.$get(`/article?page=${this.page}`);
       const response = await this.$content("posts")
-        .limit(5)
+        .skip(this.skip)
+        .limit(3)
         .fetch();
       if (response.length === 0) {
         this.lastPage = true;
@@ -52,6 +54,7 @@ export default {
       // handle on scroll calls
       if (this.lastPage) return false;
       this.page++;
+      this.skip += 3;
       this.fetchData();
     }
   },
@@ -59,6 +62,7 @@ export default {
     return {
       articleList: [],
       page: 1,
+      skip: 0,
       lastPage: false,
       publisherImage:
         "https://s.gravatar.com/avatar/017c2f452a5b71e2bb49cd8932d42e74?s=80"
