@@ -4,7 +4,7 @@
       <a href="/">
         <img src="/img/logo-black.png" />
       </a>
-      <p class="mt-2 md:mt-0">All rights reserved 2020.</p>
+      <p class="mt-2 md:mt-0">All rights reserved 2021.</p>
       <div class="flex -mx-2 mt-4 mb-2 md:mt-0 md:mb-0">
         <a
           href="https://www.linkedin.com/in/realanilsharma/"

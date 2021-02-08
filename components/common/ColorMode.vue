@@ -2,7 +2,7 @@
   <span class="justify-between items-center cursor-pointer" @click="changeMode">
     <span
       v-if="isLightMode"
-      class="rounded-full bg-gray-100 text-rd-theme px-3 py-2 transition-colors duration-300 ease-linear"
+      class="rounded-xl text-sm border border-gray-100 text-rd-theme px-4 py-2 transition-colors duration-300 ease-linear"
     >
       <fa
         icon="sun"

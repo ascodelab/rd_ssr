@@ -26,18 +26,19 @@
       <nav>
         <ul class="lg:flex items-center justify-between text-base pt-4 lg:pt-0">
           <li>
-            <a
-              class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
-              href="https://me.ratidigital.in"
-            >
+            <NuxtLink class="header-link" to="/">
+              <fa icon="home" class="mr-1 text-rd-theme dark:text-gray-200"></fa>Home
+            </NuxtLink>
+          </li>
+          <li>
+            <a class="header-link" href="https://me.ratidigital.in">
               <fa icon="briefcase" class="mr-1 text-rd-theme dark:text-gray-200"></fa>Portfolio
             </a>
           </li>
           <li>
-            <a
-              class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 lg:mb-0 mb-2"
-              href="#"
-            >#AskMeTech</a>
+            <NuxtLink class="header-link" to="contact">
+              <b>#</b>AskMeTech
+            </NuxtLink>
           </li>
           <li>
             <ColorMode></ColorMode>
@@ -53,6 +54,9 @@
 }
 .dark-mode header {
   @apply bg-black text-gray-200 border-b border-gray-700;
+}
+.header-link {
+  @apply lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-rd-theme;
 }
 </style>
 

@@ -36,7 +36,7 @@ export default {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase', 'faQuestion', 'faCalendar', 'faTags', 'faList', 'faClock']
+        icons: ['faHome', 'faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase', 'faQuestion', 'faCalendar', 'faTags', 'faList', 'faClock']
       }
     ]
   },

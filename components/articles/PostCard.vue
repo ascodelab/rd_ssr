@@ -4,12 +4,17 @@
     <div class="cat-div">
       <theme-button class="btn-theme">{{ postCategory }}</theme-button>
     </div>
-
     <!-- section -->
     <section>
       <img :src="featureImage" :alt="postTitle" :title="postTitle" />
-      <NuxtLink class="px-4 py-8" :to="getArticleUrl">{{postTitle}}</NuxtLink>
-      <p class="text-sm text-gray-600 p-4">{{postDescription}}</p>
+      <div class="mt-2">
+        <NuxtLink class="card-link" :to="getArticleUrl">{{postTitle}}</NuxtLink>
+      </div>
+      <p class="text-sm text-gray-600 p-2">{{postDescription}}</p>
+    </section>
+    <!-- <read more>  -->
+    <section class="read-more">
+      <NuxtLink class="read-more-link" :to="getArticleUrl">explore ✈</NuxtLink>
     </section>
     <!-- footer -->
     <footer>
@@ -34,6 +39,15 @@
 }
 .btn-cat {
   @apply bg-rd-theme rounded-3xl font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6;
+}
+.card-link {
+  @apply font-bold text-gray-600 p-2 hover:underline hover:text-blue-900;
+}
+.read-more {
+  @apply flex items-center justify-center py-2 text-rd-theme;
+}
+.read-more-link {
+  @apply text-sm border-gray-100 rounded-2xl border text-rd-theme px-2 py-1 transition duration-300 ease-in-out hover:bg-rd-theme hover:text-gray-100;
 }
 .post-card-author-img {
   @apply mr-2 w-6 h-6 object-cover rounded-full border border-yellow-900 p-1;
