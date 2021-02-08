@@ -59,4 +59,9 @@ export default {
 .dark-mode {
   @apply bg-gray-800 text-gray-100;
 }
+
+/* exact link will show the primary color for only the exact matching link */
+a.nuxt-link-exact-active {
+  @apply font-extrabold;
+}
 </style>

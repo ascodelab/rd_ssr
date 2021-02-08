@@ -27,7 +27,7 @@
         <ul class="lg:flex items-center justify-between text-base pt-4 lg:pt-0">
           <li>
             <NuxtLink class="header-link" to="/">
-              <fa icon="home" class="mr-1 text-rd-theme dark:text-gray-200"></fa>Home
+              <fa icon="home" class="mr-1"></fa>Home
             </NuxtLink>
           </li>
           <li>
