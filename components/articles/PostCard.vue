@@ -34,6 +34,9 @@
 .post-card {
   @apply max-w-4xl p-2 bg-white text-gray-800 rounded-lg shadow-2xl cursor-pointer transform transition duration-500 h-full hover:scale-105;
 }
+.dark-mode .post-card {
+  @apply bg-gray-700;
+}
 .cat-div {
   @apply flex items-center justify-center;
 }
@@ -43,11 +46,17 @@
 .card-link {
   @apply font-bold text-gray-600 p-2 hover:underline hover:text-blue-900;
 }
+.dark-mode .card-link {
+  @apply text-gray-200;
+}
 .read-more {
   @apply flex items-center justify-center py-2 text-rd-theme;
 }
 .read-more-link {
   @apply text-sm border-gray-100 rounded-2xl border text-rd-theme px-2 py-1 transition duration-300 ease-in-out hover:bg-rd-theme hover:text-gray-100;
+}
+.dark-mode .read-more-link {
+  @apply border-gray-600;
 }
 .post-card-author-img {
   @apply mr-2 w-6 h-6 object-cover rounded-full border border-yellow-900 p-1;
