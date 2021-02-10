@@ -46,4 +46,10 @@ export default {
   purgeCSS: {
     whitelist: ['dark-mode']
   },
+  generate: {
+    routes: [
+      'getting-started-with-awake',
+      'light-css-footprint'
+    ]
+  }
 }
