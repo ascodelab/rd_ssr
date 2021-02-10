@@ -64,6 +64,9 @@
 footer {
   @apply flex justify-between items-center p-4 border-t border-red-900 text-rd-theme;
 }
+.dark-mode footer {
+  @apply border-gray-600;
+}
 </style>
 <script>
 import { getFormattedDate } from "~/utils/helper";

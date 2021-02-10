@@ -58,13 +58,27 @@ export default {
         phone: "",
         message: ""
       },
+      seoData: {
+        title:
+          "Interested in working together or have any question/suggestion? We should queue up a chat.",
+        subtitle:
+          "Interested in working together or have any question/suggestion? We should queue up a chat. Alternatively, you can drop me an email on anela.kumar@gmail.com or call me on 8860327209.",
+        featureImage: `${this.$config.baseURL}uploads/anil-sharma.jpg`,
+        url: this.$config.baseURL
+      },
       valid: false,
       success: false,
       errors: {},
       thankyouMessage: "your message has been sent successfully!"
     };
   },
+  created() {
+    this.setSEOData();
+  },
   methods: {
+    setSEOData() {
+      this.$store.dispatch("setSEO", this.seoData);
+    },
     register() {
       this.errors = {};
       const validName = validate.name(this.contact.name);

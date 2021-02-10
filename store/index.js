@@ -1,9 +1,9 @@
 export const state = () => ({
     theme: 'default',
-    url: 'http://localhost:8080/',
-    title: 'asdads',
-    subtitle: 'asdadssas',
-    featureImage: 'http://localhost:8080/uploads/anil-sharma.jpg',
+    url: 'https://ratidigital.in',
+    title: 'PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.',
+    subtitle: 'PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.',
+    featureImage: 'https://ratidigital.in/uploads/anil-sharma.jpg',
 })
 
 //setting data [ mutations]

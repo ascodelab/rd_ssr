@@ -20,35 +20,18 @@ export default {
       article
     };
   },
-  head() {
-    return {
-      title: this.article.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.article.description
-        },
-        // Open Graph
-        { hid: "og:title", property: "og:title", content: this.article.title },
-        {
-          hid: "og:description",
-          property: "og:description",
-          content: this.article.description
-        },
-        // Twitter Card
-        {
-          hid: "twitter:title",
-          name: "twitter:title",
-          content: this.article.title
-        },
-        {
-          hid: "twitter:description",
-          name: "twitter:description",
-          content: this.article.description
-        }
-      ]
-    };
+  created() {
+    this.setSEOData();
+  },
+  methods: {
+    setSEOData() {
+      let data = {};
+      data.title = this.article.title;
+      data.subtitle = this.article.subtitle;
+      data.featureImage = `${this.$config.baseURL}${this.article.featureImage}`;
+      data.url = `${this.$config.baseURL}${this.article.slug}`;
+      this.$store.dispatch("setSEO", data);
+    }
   }
 };
 </script>
