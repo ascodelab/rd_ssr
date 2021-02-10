@@ -21,6 +21,12 @@ export default {
           "PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.",
         featureImage: `${this.$config.baseURL}uploads/anil-sharma.jpg`,
         url: this.$config.baseURL
+      },
+      structuredData: {
+        "@context": "http://schema.org",
+        "@type": "website",
+        name: "Rati Digital",
+        url: "https://ratidigital.in"
       }
     };
   },
@@ -31,6 +37,11 @@ export default {
     setSEOData() {
       this.$store.dispatch("setSEO", this.seoData);
     }
+  },
+  head() {
+    return {
+      script: [{ type: "application/ld+json", json: this.structuredData }]
+    };
   }
 };
 </script>
