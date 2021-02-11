@@ -6,8 +6,8 @@
 
 <style lang="postcss" scoped>
 .player {
-  height: 200px;
-  width: 640px;
+  height: 360px;
+  width: 100%;
 }
 .video-wrapper {
   @apply player relative;

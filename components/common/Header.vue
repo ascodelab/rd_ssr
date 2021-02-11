@@ -50,7 +50,7 @@
 </template>
 <style lang="postcss" scoped>
 .light-mode header {
-  @apply bg-white text-rd-theme border-b border-gray-200;
+  @apply bg-white text-rd-theme border-b border-gray-100;
 }
 .dark-mode header {
   @apply bg-black text-gray-200 border-b border-gray-700;

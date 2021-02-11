@@ -1,15 +1,54 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <nuxt-content
-      class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
-      :document="article"
-    />
-  </article>
+  <div class="article-wrapper">
+    <!-- article banner -->
+    <section class="article-banner">
+      <div class="article-heading">
+        <h1>{{ article.title }}</h1>
+      </div>
+    </section>
+    <!-- video player -->
+    <section class="article-video-container prose prose-sm pt-6 pb-2 mx-auto">
+      <Video :videoId="article.videoId" />
+    </section>
+    <!-- article feature image -->
+    <section class="article-fet-img prose prose-sm pt-4 pb-2 mx-auto">
+      <img :src="article.featureImage" />
+    </section>
+    <!-- article content -->
+    <section class="article-content-wrapper">
+      <div class="w-full prose prose-sm mx-auto">
+        <nuxt-content :document="article" />
+      </div>
+    </section>
+  </div>
 </template>
-<style>
-.dark-mode p {
-  @apply text-gray-200;
+<style lang="postcss">
+.article-banner {
+  @apply bg-white border-b border-gray-100 flex items-center justify-center py-8;
+}
+.dark-mode .article-banner {
+  @apply bg-gray-800 border-gray-700;
+}
+.article-heading {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-900 to-red-700 text-4xl font-black;
+}
+.article-content-wrapper {
+  @apply pb-12;
+}
+.dark-mode .article-content-wrapper {
+  @apply bg-gray-800 text-white !important;
+}
+.dark-mode .prose-sm,
+.dark-mode .prose-sm h2 {
+  @apply text-gray-100;
+}
+.dark-mode .prose-sm a,
+.dark-mode .prose-sm code,
+.dark-mode .prose-sm thead {
+  @apply text-gray-100 font-bold;
+}
+.dark-mode .prose-sm pre {
+  @apply bg-gray-600 text-gray-100 font-bold;
 }
 </style>
 <script>

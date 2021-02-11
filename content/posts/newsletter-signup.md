@@ -6,6 +6,7 @@ author: Anil Sharma
 date: 2019-08-04T04:27:56.800Z
 slug : newsletter-signup
 featureImage: /uploads/mailchimp.jpg
+videoId : YXvZZh6ctvE
 ---
 You're publishing great content! Make sure people can get it easily right in their inbox with Awake's ready to go Mailchimp integration. Follow these instructions to get your newsletter up and running
 

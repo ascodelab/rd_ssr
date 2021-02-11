@@ -10,7 +10,7 @@
       <div class="mt-2">
         <NuxtLink class="card-link" :to="getArticleUrl">{{postTitle}}</NuxtLink>
       </div>
-      <p class="text-sm text-gray-600 p-2">{{postDescription}}</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400 p-2">{{postDescription}}</p>
     </section>
     <!-- <read more>  -->
     <section class="read-more">

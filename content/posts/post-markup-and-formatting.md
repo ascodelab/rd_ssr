@@ -6,6 +6,7 @@ author: Anil Sharma
 date: 2019-08-03T04:27:56.800Z
 slug : post-markup-and-formatting
 featureImage: /uploads/markup-hero.jpg
+videoId : YXvZZh6ctvE
 ---
 Awake uses the awesome npm package [markdown-it ](https://github.com/markdown-it/markdown-it)by [Vitaly Puzrin](https://github.com/puzrin) to provide a wealth of markup options for your posts
 
