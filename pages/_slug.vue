@@ -7,17 +7,11 @@
       </div>
     </section>
     <!-- social and media switc widget -->
-    <section class="article-media-switch-widget">
-      <media-switch></media-switch>
-    </section>
+    <media-switch />
     <!-- video player -->
-    <section v-if="videoEnabled" class="article-video-container">
-      <Video :videoId="article.videoId" />
-    </section>
+    <Video :videoId="article.videoId" />
     <!-- article feature image -->
-    <section v-if="!videoEnabled" class="article-fet-img">
-      <img :src="article.featureImage" />
-    </section>
+    <feature-image :imageURL="article.featureImage" />
     <!-- article content -->
     <section class="article-content-wrapper">
       <div class="w-full prose prose-sm mx-auto">
@@ -36,12 +30,6 @@
 .article-heading {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-red-900 to-red-700 text-4xl font-black;
 }
-.article-video-container {
-  @apply prose prose-sm pt-6 pb-2 mx-auto transform transition-all duration-1000 ease-in-out scale-100;
-}
-.article-fet-img {
-  @apply prose prose-sm pt-4 pb-2 mx-auto transform transition-all duration-1000 ease-in-out scale-100;
-}
 .article-content-wrapper {
   @apply pb-12;
 }
@@ -59,12 +47,6 @@
 }
 .dark-mode .prose-sm pre {
   @apply bg-gray-600 text-gray-100 font-bold;
-}
-.article-media-switch-widget {
-  @apply bg-white  pt-2 pb-8;
-}
-.dark-mode .article-media-switch-widget {
-  @apply bg-gray-800;
 }
 </style>
 <script>

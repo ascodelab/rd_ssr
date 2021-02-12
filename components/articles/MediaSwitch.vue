@@ -1,20 +1,16 @@
 <template>
-  <div class="flex items-center justify-center">
-    <!-- Toggle Button -->
-    <label for="mid-switch" class="flex items-center cursor-pointer">
-      <!-- toggle -->
-      <div class="relative">
-        <!-- input -->
-        <input id="mid-switch" type="checkbox" class="hidden" @click="change()" />
-        <!-- line -->
-        <div class="toggle__line"></div>
-        <!-- dot -->
-        <div class="toggle__dot"></div>
-      </div>
-      <!-- label -->
-      <div class="ml-2 text-gray-400 font-xs">video</div>
-    </label>
-  </div>
+  <section class="article-media-switch-widget">
+    <div class="flex items-center justify-center">
+      <label for="mid-switch" class="flex items-center cursor-pointer">
+        <div class="relative">
+          <input id="mid-switch" type="checkbox" class="hidden" @click="change()" />
+          <div class="toggle__line"></div>
+          <div class="toggle__dot"></div>
+        </div>
+        <div class="ml-2 text-gray-400 font-xs">video</div>
+      </label>
+    </div>
+  </section>
 </template>
 <!-- JS -->
 <script>
@@ -36,6 +32,12 @@ export default {
 </script>
 <!-- CSS -->
 <style lang="postcss">
+.article-media-switch-widget {
+  @apply bg-white  pt-2 pb-8;
+}
+.dark-mode .article-media-switch-widget {
+  @apply bg-gray-800;
+}
 .toggle__line {
   @apply w-8 h-2 bg-gray-400 rounded-full shadow-inner;
 }
