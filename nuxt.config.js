@@ -24,7 +24,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     'nuxt-fontawesome',
-    '@nuxt/content'
+    '@nuxt/content',
+    'vue-social-sharing/nuxt'
   ],
   buildModules: [
     '@nuxtjs/tailwindcss',
@@ -36,10 +37,11 @@ export default {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['faHome', 'faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase', 'faQuestion', 'faCalendar', 'faTags', 'faList', 'faClock']
+        icons: ['faHome', 'faMoon', 'faSun', 'faSearch', 'faEnvelope', 'faUser', 'faBriefcase', 'faQuestion', 'faCalendar', 'faTags', 'faList', 'faClock', 'faShareAlt']
       }
     ]
   },
+  //'faFacebookF', 'faTwitter', 'faLinkedinIn', 'faWhatsapp', 'faTelegramPlane', 'faSkype'
   axios: {},
   build: {
   },

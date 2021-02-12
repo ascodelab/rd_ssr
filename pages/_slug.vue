@@ -6,8 +6,8 @@
         <h1>{{ article.title }}</h1>
       </div>
     </section>
-    <!-- social and media switc widget -->
-    <media-switch />
+    <!-- social share -->
+    <social-share />
     <!-- video player -->
     <Video :videoId="article.videoId" />
     <!-- article feature image -->
