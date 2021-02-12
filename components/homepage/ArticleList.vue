@@ -23,13 +23,7 @@
 }
 </style>
 <script>
-import { mapMutations, mapState } from "vuex";
 export default {
-  computed: {
-    ...mapState("modules/article", {
-      articles: state => state.articles
-    })
-  },
   created() {
     this.fetchData();
   },

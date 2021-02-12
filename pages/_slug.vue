@@ -6,12 +6,16 @@
         <h1>{{ article.title }}</h1>
       </div>
     </section>
+    <!-- social and media switc widget -->
+    <section class="article-media-switch-widget">
+      <media-switch></media-switch>
+    </section>
     <!-- video player -->
-    <section class="article-video-container prose prose-sm pt-6 pb-2 mx-auto">
+    <section v-if="videoEnabled" class="article-video-container">
       <Video :videoId="article.videoId" />
     </section>
     <!-- article feature image -->
-    <section class="article-fet-img prose prose-sm pt-4 pb-2 mx-auto">
+    <section v-if="!videoEnabled" class="article-fet-img">
       <img :src="article.featureImage" />
     </section>
     <!-- article content -->
@@ -24,13 +28,19 @@
 </template>
 <style lang="postcss">
 .article-banner {
-  @apply bg-white border-b border-gray-100 flex items-center justify-center py-8;
+  @apply bg-white flex items-center justify-center pt-8;
 }
 .dark-mode .article-banner {
-  @apply bg-gray-800 border-gray-700;
+  @apply bg-gray-800;
 }
 .article-heading {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-red-900 to-red-700 text-4xl font-black;
+}
+.article-video-container {
+  @apply prose prose-sm pt-6 pb-2 mx-auto transform transition-all duration-1000 ease-in-out scale-100;
+}
+.article-fet-img {
+  @apply prose prose-sm pt-4 pb-2 mx-auto transform transition-all duration-1000 ease-in-out scale-100;
 }
 .article-content-wrapper {
   @apply pb-12;
@@ -50,9 +60,16 @@
 .dark-mode .prose-sm pre {
   @apply bg-gray-600 text-gray-100 font-bold;
 }
+.article-media-switch-widget {
+  @apply bg-white  pt-2 pb-8;
+}
+.dark-mode .article-media-switch-widget {
+  @apply bg-gray-800;
+}
 </style>
 <script>
 import { getFormattedDate } from "~/utils/helper";
+import { mapActions, mapState } from "vuex";
 
 export default {
   data() {
@@ -61,7 +78,8 @@ export default {
   computed: {
     datePretty() {
       return getFormattedDate(this.article.date);
-    }
+    },
+    ...mapState(["videoEnabled"])
   },
   async asyncData({ $content, params }) {
     const article = await $content("posts", params.slug).fetch();
