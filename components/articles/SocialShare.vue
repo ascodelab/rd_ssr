@@ -1,34 +1,34 @@
 <template>
   <div class="s-s-w">
-    <fa icon="share-alt" class="mr-1 text-4xl pr-2 text-gray-300" />
+    <fa icon="share-alt" class="mr-1 text-4xl pr-2 text-rd-theme" />
     <div class="icons">
       <share platform="facebook">
-        <img src="/icons/facebook.svg" />
+        <i href="#" class="fa fa-facebook"></i>
       </share>
     </div>
     <div class="icons">
       <share platform="twitter">
-        <img src="/icons/twitter.svg" />
+        <i href="#" class="fa fa-twitter"></i>
       </share>
     </div>
     <div class="icons">
       <share platform="linkedIn">
-        <img src="/icons/linkedin.svg" />
+        <i href="#" class="fa fa-linkedin"></i>
       </share>
     </div>
     <div class="icons">
       <share platform="whatsApp">
-        <img src="/icons/whatsapp.svg" />
+        <i href="#" class="fa fa-whatsapp"></i>
       </share>
     </div>
     <div class="icons">
       <share platform="telegram">
-        <img src="/icons/telegram.svg" />
+        <i href="#" class="fa fa-telegram"></i>
       </share>
     </div>
     <div class="icons">
       <share platform="skype">
-        <img src="/icons/skype.svg" />
+        <i href="#" class="fa fa-skype"></i>
       </share>
     </div>
     <!-- social and media switc widget -->
@@ -44,11 +44,13 @@
   @apply border-gray-700;
 }
 .icons {
-  @apply bg-white transition-all duration-300 ease-in-out border p-1 ml-1 rounded-full transform transition-all duration-500 hover:scale-110;
+  @apply bg-transparent p-1;
 }
-
 .dark-mode .icons {
-  @apply bg-gray-300 border-gray-800;
+  @apply bg-transparent;
+}
+.icons i {
+  @apply flex items-center justify-center rounded-full bg-rd-theme text-white text-xs h-4 w-4 p-3 transform transition-all duration-500 hover:scale-105 hover:bg-red-900;
 }
 </style>
 

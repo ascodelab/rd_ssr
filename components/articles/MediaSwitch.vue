@@ -7,7 +7,7 @@
           <div class="toggle__line"></div>
           <div class="toggle__dot"></div>
         </div>
-        <div class="ml-1 text-gray-400 font-xs">video</div>
+        <div class="ml-1 text-rd-theme font-xs">video</div>
       </label>
     </div>
   </section>
