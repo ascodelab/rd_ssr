@@ -12,6 +12,8 @@
     <Video :videoId="article.videoId" />
     <!-- article feature image -->
     <feature-image :imageURL="article.featureImage" />
+    <!-- post date/author information -->
+    <post-meta :date="datePretty" :cat="article.category" :author="article.author" />
     <!-- article content -->
     <section class="article-content-wrapper">
       <div class="w-full prose prose-sm mx-auto">

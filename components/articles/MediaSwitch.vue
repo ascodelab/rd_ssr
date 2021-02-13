@@ -39,10 +39,10 @@ export default {
   @apply bg-gray-800;
 }
 .toggle__line {
-  @apply w-8 h-2 bg-gray-300 rounded-full shadow-inner;
+  @apply w-8 h-2 bg-red-200 rounded-full shadow-inner;
 }
 .toggle__dot {
-  @apply transition-all duration-300 ease-in-out bg-gray-500 absolute w-5 h-2 bg-gray-300 rounded-full shadow inset-y-0 left-0;
+  @apply transition-all duration-300 ease-in-out bg-gray-400 absolute w-5 h-2 rounded-full shadow inset-y-0 left-0;
 }
 input:checked ~ .toggle__dot {
   transform: translateX(70%);
