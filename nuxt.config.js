@@ -50,9 +50,12 @@ export default {
     whitelist: ['dark-mode']
   },
   generate: {
-    routes: [
-      'getting-started-with-awake',
-      'light-css-footprint'
-    ]
+    //routes: ['getting-started-with-awake','light-css-footprint']
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('posts').only(['slug']).fetch()
+
+      return files.map(file => file.slug)
+    }
   }
 }
