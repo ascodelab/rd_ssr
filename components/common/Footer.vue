@@ -1,9 +1,14 @@
 <template>
-  <footer class="px-6 py-2 bg-white text-gray-900 border-t border-gray-200">
+  <footer>
     <div class="flex flex-col justify-between items-center container mx-auto md:flex-row">
-      <a href="/">
+      <!-- logo as per dark/light theme -->
+      <NuxtLink v-if="isLightMode" :to="home">
         <img src="/img/logo-white.png" />
-      </a>
+      </NuxtLink>
+      <NuxtLink v-else :to="home">
+        <img src="/img/logo-black.png" />
+      </NuxtLink>
+      <!-- logo ends -->
       <p class="mt-2 md:mt-0">© 2021 Rati Digital. All rights reserved.</p>
       <div class="flex -mx-2 mt-4 mb-2 md:mt-0 md:mb-0">
         <a
@@ -34,3 +39,27 @@
     </div>
   </footer>
 </template>
+
+<style lang="postcss" scoped>
+footer {
+  @apply px-6 py-2 bg-white text-gray-900 border-t border-gray-200;
+}
+.dark-mode footer {
+  @apply bg-black text-gray-500  border-gray-700;
+}
+</style>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    home() {
+      return "/";
+    },
+    isLightMode() {
+      return this.$colorMode.preference === "dark" ? false : true;
+    }
+  }
+};
+</script>
