@@ -11,6 +11,7 @@
           :publisherImage="publisherImage"
           :publishedDate="article.createdAt"
           :postCategory="article.category"
+          :postContent="article.body"
         ></post-card>
       </article>
       <div v-observe-visibility="handleScrolledToBottom"></div>

@@ -7,12 +7,16 @@
       <a href="https://me.ratidigital.in" class="aut-link">{{ author }}</a>
     </div>
     <div class="flex items-center date">
-      <i class="fa fa-calendar text-rd-theme" aria-hidden="true"></i>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
       <span class="pl-2">{{ date }}</span>
     </div>
     <div class="flex items-center date">
-      <i class="fa fa-list-alt text-rd-theme" aria-hidden="true"></i>
+      <i class="fa fa-list-alt" aria-hidden="true"></i>
       <span class="pl-2">{{ cat}}</span>
+    </div>
+    <div class="pl-2 text-gray-400 font-bold">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <reading-time :content="content"></reading-time>
     </div>
   </div>
 </template>
@@ -37,7 +41,7 @@
 <!-- JS -->
 <script>
 export default {
-  props: ["author", "date", "cat"],
+  props: ["author", "date", "cat", "content"],
   computed: {},
   data() {
     return {

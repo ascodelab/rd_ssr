@@ -10,7 +10,11 @@
       <div class="mt-2">
         <NuxtLink class="card-link" :to="getArticleUrl">{{postTitle}}</NuxtLink>
       </div>
-      <p class="text-sm text-gray-600 dark:text-gray-400 p-2">{{postDescription}}</p>
+      <p class="text-sm text-gray-600 dark:text-gray-300 p-2">{{postDescription}}</p>
+    </section>
+    <!-- red time calculator -->
+    <section class="post-card-read-time">
+      <reading-time :content="postContent"></reading-time>
     </section>
     <!-- <read more>  -->
     <section class="read-more">
@@ -23,7 +27,7 @@
         {{ publisherName }}
       </a>
       <div class="flex items-center">
-        <img src="https://img.icons8.com/offices/20/000000/calendar.png" />
+        <i class="fa fa-calendar text-base" aria-hidden="true"></i>
         <span class="pl-1">{{ datePretty }}</span>
       </div>
     </footer>
@@ -49,6 +53,9 @@
 .dark-mode .card-link {
   @apply text-gray-200;
 }
+.post-card-read-time {
+  @apply flex items-center justify-center text-xs font-light text-gray-500 dark:text-gray-400;
+}
 .read-more {
   @apply flex items-center justify-center py-2 text-rd-theme;
 }
@@ -59,10 +66,10 @@
   @apply border-gray-600;
 }
 .post-card-author-img {
-  @apply mr-2 w-6 h-6 object-cover rounded-full border border-yellow-900 p-1;
+  @apply mr-2 w-6 h-6 object-cover rounded-full border border-gray-400 p-1;
 }
 footer {
-  @apply flex justify-between items-center p-4 border-t border-red-900 text-rd-theme;
+  @apply flex justify-between items-center p-3 border-t border-gray-300 text-xs font-light text-gray-500 dark:text-gray-400;
 }
 .dark-mode footer {
   @apply border-gray-600;
@@ -70,6 +77,7 @@ footer {
 </style>
 <script>
 import { getFormattedDate } from "~/utils/helper";
+const readingTime = require("reading-time");
 export default {
   props: [
     "postTitle",
@@ -79,7 +87,8 @@ export default {
     "publisherName",
     "publisherImage",
     "publishedDate",
-    "postCategory"
+    "postCategory",
+    "postContent"
   ],
   computed: {
     getFeatureImage() {
@@ -90,6 +99,9 @@ export default {
     },
     datePretty() {
       return getFormattedDate(this.publishedDate);
+    },
+    readTime() {
+      return readingTime(this.postContent);
     }
   },
   data() {
