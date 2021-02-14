@@ -29,7 +29,7 @@
 </template>
 <style lang="postcss">
 .article-banner {
-  @apply bg-white flex items-center justify-center pt-8;
+  @apply bg-white flex items-center justify-center pt-4;
 }
 .dark-mode .article-banner {
   @apply bg-gray-800;

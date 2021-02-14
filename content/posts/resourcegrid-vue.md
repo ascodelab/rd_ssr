@@ -19,7 +19,7 @@ The `ResourceGrid` powers the grid display of both posts and categories in the A
 There are 2 simple wrappers built around the `ResourceGrid` for easily displaying a categories grid or a posts grid, easily enough they are `CategoriesGrid` and `PostsGrid`.
 
 ## Examples
-```
+```html[HTML]
 <--! All posts in grid with 3 per row lazy loaded until no more-->
 <posts-grid />
 
@@ -33,4 +33,12 @@ There are 2 simple wrappers built around the `ResourceGrid` for easily displayin
 <categories-grid />
 
 <--! etc -->
+```
+```js[nuxt.config.js]
+export default {
+  nuxt: "is the best"
+}
+```
+```html[my-first-blog-post.md]
+<p>code styling is easy</p>
 ```
