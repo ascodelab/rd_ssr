@@ -26,7 +26,8 @@ export default {
     '@nuxtjs/axios',
     'nuxt-fontawesome',
     '@nuxt/content',
-    'vue-social-sharing/nuxt'
+    'vue-social-sharing/nuxt',
+    '@nuxtjs/sitemap'
   ],
   buildModules: [
     '@nuxtjs/tailwindcss',
@@ -45,6 +46,15 @@ export default {
   //'faFacebookF', 'faTwitter', 'faLinkedinIn', 'faWhatsapp', 'faTelegramPlane', 'faSkype'
   axios: {},
   build: {
+  },
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('posts').only(['slug']).fetch()
+
+      return files.map(file => file.slug)
+    }
   },
   purgeCSS: {
     whitelist: ['dark-mode']
