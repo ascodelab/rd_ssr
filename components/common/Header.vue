@@ -10,7 +10,7 @@
       </NuxtLink>
       <!-- logo ends -->
     </div>
-    <label for="menu-toggle" class="pointer-cursor lg:hidden block">
+    <label for="menu-toggle" class="cursor-pointer lg:hidden block" @click="menuToggle">
       <svg
         class="fill-current text-gray-900"
         xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
       </svg>
     </label>
-    <div class="hidden lg:flex lg:items-center lg:w-auto w-full">
+    <div class="lg:flex items-center lg:w-auto w-full justify-center" :class="{ 'hidden': menu }">
       <nav>
         <ul class="lg:flex items-center justify-between text-base pt-4 lg:pt-0">
           <li>
@@ -63,7 +63,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      menu: true
+    };
   },
   computed: {
     home() {
@@ -71,6 +73,11 @@ export default {
     },
     isLightMode() {
       return this.$colorMode.preference === "dark" ? false : true;
+    }
+  },
+  methods: {
+    menuToggle() {
+      this.menu = !this.menu;
     }
   }
 };

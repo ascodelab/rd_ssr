@@ -59,13 +59,13 @@ export default {
   purgeCSS: {
     whitelist: ['dark-mode']
   },
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
-  },
+  // content: {
+  //   markdown: {
+  //     prism: {
+  //       theme: 'prism-themes/themes/prism-material-oceanic.css'
+  //     }
+  //   }
+  // },
   generate: {
     //routes: ['getting-started-with-awake','light-css-footprint']
     async routes() {
