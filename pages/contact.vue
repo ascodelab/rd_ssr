@@ -18,8 +18,8 @@
       <div class="form-fields-wrappers">
         <div>
           <span class="form-span">Full Name</span>
-          <input class="form-input" v-model="contact.name" ref="name" type="text" />
-          <div class="form-error">{{ errors.name }}</div>
+          <input class="form-input" v-model="contact.full_name" ref="full_name" type="text" />
+          <div class="form-error">{{ errors.full_name }}</div>
         </div>
         <div class="mt-4">
           <span class="form-span">Email</span>
@@ -53,7 +53,7 @@ export default {
   data() {
     return {
       contact: {
-        name: "",
+        full_name: "",
         email: "",
         phone: "",
         message: ""
@@ -81,11 +81,11 @@ export default {
     },
     register() {
       this.errors = {};
-      const validName = validate.name(this.contact.name);
-      this.errors.name = validName.error;
+      const validName = validate.name(this.contact.full_name);
+      this.errors.full_name = validName.error;
       this.valid = validName.valid;
       if (!validName.valid) {
-        this.$refs.name.focus();
+        this.$refs.full_name.focus();
         return false;
       }
 
@@ -122,6 +122,13 @@ export default {
     //function sendEmail()
     async sendEmail() {
       const resp = await this.$axios.post("/email/contact", this.contact);
+      //fire GA Event
+      this.$ga.event(
+        "Form Submit",
+        "contact/submit",
+        "#AskMeTech",
+        this.contact
+      );
       //reset form
       this.contact.name = this.contact.email = this.contact.phone = this.contact.message =
         "";

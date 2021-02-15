@@ -32,7 +32,8 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/google-analytics'
   ],
   fontawesome: {
     component: 'fa',
@@ -43,7 +44,12 @@ export default {
       }
     ]
   },
-  //'faFacebookF', 'faTwitter', 'faLinkedinIn', 'faWhatsapp', 'faTelegramPlane', 'faSkype'
+  googleAnalytics: {
+    id: 'UA-189750003-1',
+    autoTracking: {
+      screenview: true
+    }
+  },
   axios: {},
   build: {
   },
