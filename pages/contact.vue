@@ -123,12 +123,7 @@ export default {
     async sendEmail() {
       const resp = await this.$axios.post("/email/contact", this.contact);
       //fire GA Event
-      this.$ga.event(
-        "Form Submit",
-        "contact/submit",
-        "#AskMeTech",
-        this.contact.email
-      );
+      this.$ga.event("Form Submit", "contact/submit", "#AskMeTech", 1);
       //reset form
       this.contact.name = this.contact.email = this.contact.phone = this.contact.message =
         "";
