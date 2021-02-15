@@ -125,7 +125,7 @@ export default {
       //fire GA Event
       this.$ga.event("Form Submit", "contact/submit", "#AskMeTech", 1);
       //reset form
-      this.contact.name = this.contact.email = this.contact.phone = this.contact.message =
+      this.contact.full_name = this.contact.email = this.contact.phone = this.contact.message =
         "";
     }
   }

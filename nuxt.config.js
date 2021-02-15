@@ -17,6 +17,13 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/img/logo.png' },
       { rel: 'stylesheet', type: "text/css", href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
+    ],
+    script: [
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-1542763932800964',
+        async: true
+      }
     ]
   },
   css: [],
@@ -45,10 +52,7 @@ export default {
     ]
   },
   googleAnalytics: {
-    id: 'UA-189750003-1',
-    autoTracking: {
-      screenview: true
-    }
+    id: 'UA-189750003-1'
   },
   axios: {},
   build: {
