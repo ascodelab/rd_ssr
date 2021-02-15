@@ -18,7 +18,7 @@
     </section>
     <!-- <read more>  -->
     <section class="read-more">
-      <NuxtLink class="read-more-link" :to="getArticleUrl">explore ✈</NuxtLink>
+      <NuxtLink class="read-more-link" :to="getArticleUrl">░R░E░A░D░</NuxtLink>
     </section>
     <!-- footer -->
     <footer>
@@ -57,7 +57,7 @@
   @apply flex items-center justify-center text-xs font-light text-gray-500 dark:text-gray-400;
 }
 .read-more {
-  @apply flex items-center justify-center py-2 text-rd-theme;
+  @apply flex items-center justify-center font-bold py-2 text-rd-theme;
 }
 .read-more-link {
   @apply text-sm border-gray-100 rounded-2xl border text-rd-theme px-2 py-1 transition duration-300 ease-in-out hover:bg-rd-theme hover:text-gray-100;

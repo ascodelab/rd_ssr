@@ -1,6 +1,6 @@
 <template>
   <div class="w-al">
-    <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-y-10 gap-x-6 flex-1">
+    <div class="grid-config">
       <article v-for="(article, index) in articleList" :key="index">
         <post-card
           :postTitle="article.title"
@@ -21,6 +21,9 @@
 <style lang="postcss" scoped>
 .w-al {
   @apply flex justify-center mx-4 my-16;
+}
+.grid-config {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 flex-1;
 }
 </style>
 <script>
