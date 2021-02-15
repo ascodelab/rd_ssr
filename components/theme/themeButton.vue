@@ -6,6 +6,9 @@
 
 <style lang="postcss" scoped>
 .btn-theme {
-  @apply bg-white text-xs border-double border-4  border-gray-100 shadow-inner rounded-3xl text-gray-700 px-4 py-2 transition duration-300 ease-in-out relative -top-6;
+  @apply bg-white text-xs border-double border-4 border-gray-100 shadow-inner rounded-3xl text-gray-700 px-4 py-2 transition duration-300 ease-in-out relative -top-6;
+}
+.dark-mode .btn-theme {
+  @apply bg-gray-700 text-gray-200 border-gray-800;
 }
 </style>
