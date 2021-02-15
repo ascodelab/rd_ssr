@@ -21,7 +21,7 @@ export default {
     script: [
       {
         src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        'data-ad-client': 'ca-pub-1542763932800964',
+        'data-ad-client': process.env.G_ANALYTICS,
         async: true
       }
     ]
@@ -52,7 +52,7 @@ export default {
     ]
   },
   googleAnalytics: {
-    id: 'UA-189750003-1'
+    id: process.env.G_ADSENSE
   },
   axios: {},
   build: {
