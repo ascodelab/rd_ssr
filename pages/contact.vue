@@ -127,7 +127,7 @@ export default {
         "Form Submit",
         "contact/submit",
         "#AskMeTech",
-        this.contact
+        this.contact.email
       );
       //reset form
       this.contact.name = this.contact.email = this.contact.phone = this.contact.message =
