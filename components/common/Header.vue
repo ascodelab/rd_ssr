@@ -40,9 +40,6 @@
               <b>#</b>AskMeTech
             </NuxtLink>
           </li>
-          <li>
-            <ColorMode></ColorMode>
-          </li>
         </ul>
       </nav>
     </div>

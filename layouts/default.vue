@@ -6,6 +6,8 @@
       <Nuxt />
     </div>
     <!-- footer component -->
+    <!-- color mode -->
+    <ColorMode></ColorMode>
     <Footer />
   </div>
 </template>

@@ -1,28 +1,18 @@
 <template>
-  <span class="justify-between items-center cursor-pointer" @click="changeMode">
-    <span
-      v-if="isLightMode"
-      class="rounded-xl text-sm border border-gray-100 text-rd-theme px-4 py-2 transition-colors duration-300 ease-linear"
-    >
-      <fa
-        icon="sun"
-        class="duration-700 ease-in-out fa-spin text-rd-theme"
-        :class="{ 'text-orange-500': isLightMode,}"
-      />
+  <span class="cm-btn justify-between items-center cursor-pointer" @click="changeMode">
+    <span v-if="isLightMode">
+      <fa icon="sun" class="duration-700 ease-in-out fa-spin" />
     </span>
-    <span
-      v-if="!isLightMode"
-      class="rounded-full bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300 ease-linear px-3 py-2"
-    >
-      <fa
-        icon="moon"
-        class="duration-700 ease-in-out animate-pulse"
-        :class="{ 'text-yellow-500 ': !isLightMode,}"
-      />
+    <span v-if="!isLightMode">
+      <fa icon="moon" class="duration-700 ease-in-out animate-pulse" />
     </span>
   </span>
 </template>
-
+<style lang="postcss">
+.cm-btn {
+  @apply bg-rd-theme text-white fixed bottom-32 pl-2 pr-3 py-2 rounded-r-lg transition-colors duration-300 ease-linear dark:bg-black;
+}
+</style>
 <script>
 export default {
   data() {
