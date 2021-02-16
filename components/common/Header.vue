@@ -52,6 +52,9 @@
 .dark-mode header {
   @apply bg-black text-gray-200 border-b border-gray-700;
 }
+nav li {
+  @apply flex items-center justify-center;
+}
 .header-link {
   @apply lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-rd-theme;
 }
