@@ -24,7 +24,7 @@ export default {
     change() {
       let data = {};
       data.videoEnabled = this.videoEnabled == false ? true : false;
-      console.log(data);
+      //console.log(data);
       this.$store.dispatch("setData", data);
     }
   }
