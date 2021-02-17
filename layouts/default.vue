@@ -15,8 +15,13 @@
 export default {
   head() {
     return {
-      title: this.$store.state.title,
+      title: `${this.$store.state.title} | ${this.$store.state.siteName} | by ${this.$store.state.author}`,
       meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: this.$store.state.title
+        },
         {
           hid: "description",
           name: "description",
@@ -51,6 +56,46 @@ export default {
           hid: "og:site_name",
           name: "og:site_name",
           content: "Rati Digital"
+        },
+        {
+          hid: "og:type",
+          name: "og:type",
+          content: "article"
+        },
+        {
+          hid: "article:published_time",
+          name: "article:published_time",
+          content: this.$store.state.articlePublishedTime
+        },
+        {
+          hid: "twitter:site",
+          name: "twitter:site",
+          content: "@ratidigital"
+        },
+        {
+          hid: "al:web:url",
+          property: "al:web:url",
+          content: this.$store.state.handle
+        },
+        {
+          hid: "twitter:creator",
+          name: "twitter:creator",
+          content: this.$store.state.handle
+        },
+        {
+          hid: "author",
+          name: "author",
+          content: this.$store.state.author
+        },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index,follow,max-image-preview:large"
+        },
+        {
+          hid: "canonical",
+          rel: "canonical",
+          content: this.$store.state.url
         }
       ]
     };

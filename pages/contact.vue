@@ -32,7 +32,7 @@
           <div class="form-error">{{ errors.phone }}</div>
         </div>
         <div class="mt-4">
-          <span class="form-span ">Tell Me How I Can Help</span>
+          <span class="form-span">Tell Me How I Can Help</span>
           <textarea class="form-input h-32" v-model="contact.message" ref="message"></textarea>
           <div class="form-error">{{ errors.message }}</div>
         </div>

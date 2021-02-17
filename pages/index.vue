@@ -18,7 +18,7 @@ export default {
         title:
           "PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.",
         subtitle:
-          "PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.",
+          "PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more. rati digital",
         featureImage: `${this.$config.baseURL}uploads/anil-sharma.jpg`,
         url: this.$config.baseURL
       },

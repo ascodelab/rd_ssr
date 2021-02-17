@@ -1,13 +1,16 @@
 export const state = () => ({
     videoEnabled: false,
     theme: 'default',
+    siteName: 'Rati Digital',
     url: 'https://ratidigital.in',
-    title: 'PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.',
+    title: 'PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more. | Rati Digital',
     subtitle: 'PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more.',
     featureImage: 'https://ratidigital.in/uploads/anil-sharma.jpg',
-    quote: "The hot reload is so fast it's near instant. - Evan You",
+    quote: '',
+    author: '',
     hashtags: "#ratidigital",
-    handle: "@realanilsharma"
+    handle: "@realanilsharma",
+    articlePublishedTime: null,
 })
 
 //setting data [ mutations]

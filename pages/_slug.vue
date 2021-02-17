@@ -82,10 +82,12 @@ export default {
   methods: {
     setSEOData() {
       let data = {};
-      data.title = this.article.title;
+      data.title = `${this.article.title}`;
       data.subtitle = this.article.subtitle;
       data.featureImage = `${this.$config.baseURL}${this.article.featureImage}`;
       data.url = `${this.$config.baseURL}${this.article.slug}`;
+      data.articlePublishedTime = this.article.date;
+      data.author = this.article.author;
       this.$store.dispatch("setSEO", data);
     }
   },
