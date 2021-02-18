@@ -10,7 +10,7 @@
 </template>
 <style lang="postcss">
 .cm-btn {
-  @apply bg-rd-theme text-white fixed bottom-32 pl-2 pr-3 py-2 rounded-r-lg transition-colors duration-300 ease-linear dark:bg-black;
+  @apply bg-rd-theme text-white fixed bottom-44 sm:bottom-80 pl-2 pr-3 py-2 rounded-r-lg transition-colors duration-300 ease-linear dark:bg-black;
 }
 </style>
 <script>
