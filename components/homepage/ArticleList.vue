@@ -9,7 +9,7 @@
           :postLink="article.slug"
           :publisherName="article.author"
           :publisherImage="publisherImage"
-          :publishedDate="article.createdAt"
+          :publishedDate="article.date"
           :postCategory="article.category"
           :postContent="article.body"
         ></post-card>
