@@ -14,10 +14,10 @@
     </section>
     <!-- red time calculator -->
     <section class="con-info pb-2">
-      <p class="h-6 bg-gray-400 w-28 mt-2 p-2 animate-pulse"></p>
+      <p class="h-4 bg-gray-400 w-28 mt-2 p-2 animate-pulse"></p>
     </section>
     <section class="con-info pb-2">
-      <p class="h-6 rounded-lg bg-gray-400 w-28 p-2 animate-pulse"></p>
+      <p class="h-4 rounded-lg bg-gray-400 w-28 p-2 animate-pulse"></p>
     </section>
     <!-- footer -->
     <footer>

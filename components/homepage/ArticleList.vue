@@ -1,7 +1,7 @@
 <template>
   <div class="w-al">
     <div class="grid-config">
-      <card-loader></card-loader>
+      <card-loader v-for="i in 3" :key="i"></card-loader>
       <article v-for="(article, index) in articleList" :key="index">
         <post-card
           :postTitle="article.title"
