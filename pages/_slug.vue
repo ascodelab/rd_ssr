@@ -21,7 +21,7 @@
     />
     <!-- article content -->
     <section class="article-content-wrapper">
-      <div class="w-full prose prose-sm mx-auto">
+      <div class="w-full prose prose-sm mx-auto px-2">
         <nuxt-content :document="article" />
       </div>
     </section>
@@ -29,13 +29,13 @@
 </template>
 <style lang="postcss">
 .article-banner {
-  @apply bg-white flex items-center justify-center pt-4;
+  @apply bg-white flex items-center justify-center p-4 pb-0 text-lg sm:text-3xl;
 }
 .dark-mode .article-banner {
   @apply bg-gray-800;
 }
 .article-heading {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-900 to-red-700 text-4xl font-black;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-900 to-red-700 font-black;
 }
 .article-content-wrapper {
   @apply pb-12;
@@ -54,6 +54,15 @@
 }
 .dark-mode .prose-sm pre {
   @apply bg-gray-600 text-gray-100 font-bold;
+}
+.prose-sm p {
+  @apply p-0 pt-4 m-0;
+}
+.prose-sm h2 {
+  @apply p-0 pt-4 m-0;
+}
+.prose hr {
+  @apply mt-3 mb-0;
 }
 </style>
 <script>

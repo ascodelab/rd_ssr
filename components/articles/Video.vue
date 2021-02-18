@@ -8,7 +8,7 @@
 
 <style lang="postcss">
 .article-video-container {
-  @apply prose prose-sm pt-6 pb-2 mx-auto transform transition-all duration-1000 ease-in-out scale-100;
+  @apply prose prose-sm pt-6 pb-2 mx-auto transform transition-all duration-1000 ease-in-out scale-100 px-2;
 }
 .player {
   height: 360px;

@@ -6,7 +6,7 @@ author: Anil Sharma
 date: 2019-08-05T04:27:56.800Z
 slug : light-css-footprint
 featureImage: /uploads/purge-css-hero.jpg
-videoId : YXvZZh6ctvE
+videoId : YXvZZh6ctvEs
 ---
 Typically the convenience of a CSS framework like Bulma comes at the cost of sending loads of unused css to the browser increasing load times and hindering user experience. So just don't use Bulma (or Bootstrap, Tailwind, or otherwise) right? No, that can't be the answer. These frameworks add to the designer's experience and ability to quickly turn around a finished design. 
 

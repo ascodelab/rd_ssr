@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Deploying NestJS Apps to Zeit Now
 subtitle: Get Up and Running with Awake
 category: Technology
 author: Anil Sharma

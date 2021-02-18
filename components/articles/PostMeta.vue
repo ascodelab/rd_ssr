@@ -10,11 +10,11 @@
       <i class="fa fa-calendar" aria-hidden="true"></i>
       <span class="pl-2">{{ date }}</span>
     </div>
-    <div class="flex items-center date">
+    <div class="flex items-center date hidden sm:block">
       <i class="fa fa-list-alt" aria-hidden="true"></i>
       <span class="pl-2">{{ cat}}</span>
     </div>
-    <div class="pl-2 text-gray-400 font-bold">
+    <div class="pl-2 text-gray-400 font-bold sm:block hidden">
       <i class="fa fa-clock-o" aria-hidden="true"></i>
       <reading-time :content="content"></reading-time>
     </div>
@@ -23,7 +23,7 @@
 
 <style lang="postcss">
 .p-m-d {
-  @apply flex items-center prose prose-sm mx-auto pt-2;
+  @apply flex items-center prose prose-sm mx-auto pt-2 px-2;
 }
 .prose-sm.p-m-d img {
   @apply p-1 m-0;
