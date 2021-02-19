@@ -25,6 +25,8 @@
         <nuxt-content :document="article" />
       </div>
     </section>
+    <!-- comments -->
+    <Comments></Comments>
   </div>
 </template>
 <style lang="postcss">

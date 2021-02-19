@@ -3,6 +3,7 @@ export default {
     baseURL: process.env.BASE_URL,
     apiURL: process.env.API_URL,
     imagePath: process.env.IMAGE_PATH,
+    disqusId: process.env.DISQUS_ID,
     axios: {
       browserBaseURL: process.env.API_URL
     }
@@ -27,7 +28,7 @@ export default {
     ]
   },
   css: [],
-  plugins: ['~/plugins/vov'],
+  plugins: ['~/plugins/vov', '~/plugins/disqus'],
   components: true,
   modules: [
     '@nuxtjs/axios',
