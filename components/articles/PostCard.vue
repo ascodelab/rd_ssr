@@ -48,7 +48,7 @@
   @apply bg-rd-theme rounded-3xl font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6;
 }
 .card-link {
-  @apply font-bold text-gray-600 p-2 hover:underline hover:text-blue-900;
+  @apply font-bold text-gray-900 p-2 hover:text-rd-theme;
 }
 .dark-mode .card-link {
   @apply text-gray-200;

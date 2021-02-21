@@ -45,6 +45,11 @@
               <b>#</b>AskMeTech
             </NuxtLink>
           </li>
+          <li>
+            <button @click="modalToggle">
+              <i class="fa fa-search"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -66,6 +71,7 @@ nav li {
 </style>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {
@@ -78,11 +84,18 @@ export default {
     },
     isLightMode() {
       return this.$colorMode.preference === "dark" ? false : true;
-    }
+    },
+    ...mapState(["searchModal"])
   },
   methods: {
     menuToggle() {
       this.menu = !this.menu;
+    },
+    modalToggle() {
+      let data = {};
+      data.searchModal = this.searchModal == false ? true : false;
+      //console.log(data);
+      this.$store.dispatch("setData", data);
     }
   }
 };

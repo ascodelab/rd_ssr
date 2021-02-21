@@ -1,6 +1,7 @@
 export const state = () => ({
-    videoEnabled: false,
     theme: 'default',
+    searchModal: false,
+    videoEnabled: false,
     siteName: 'Rati Digital',
     url: 'https://ratidigital.in',
     title: 'PHP, Node.js, Javascript, Typescript, HTML, CSS, Database, Cloud, redis, Serverless and much more. | Rati Digital',

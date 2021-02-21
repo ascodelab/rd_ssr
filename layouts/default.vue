@@ -2,6 +2,9 @@
   <div class="overflow-x-hidden">
     <!-- Header Component -->
     <Header />
+    <section v-if="searchModal">
+      <search-modal></search-modal>
+    </section>
     <div>
       <Nuxt />
     </div>
@@ -12,7 +15,12 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+
 export default {
+  computed: {
+    ...mapState(["searchModal"])
+  },
   head() {
     return {
       title: `${this.$store.state.title} | ${this.$store.state.siteName} | by ${this.$store.state.author}`,
