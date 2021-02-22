@@ -6,7 +6,7 @@
     </button>
     <!-- modal  -->
     <section v-if="searchModal">
-      <div class="fixed z-10 inset-0 overflow-y-auto">
+      <div class="fixed z-10 inset-0 overflow-y-auto bg-rd-theme">
         <div class="modal-wrap">
           <div class="fixed inset-0 transition-opacity" aria-hidden="true">
             <div class="absolute inset-0 bg-gray-400 opacity-40"></div>
