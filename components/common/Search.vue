@@ -1,15 +1,26 @@
 <template>
   <div>
     <div class="container mx-auto pt-2">
-      <form>
-        <input type="search" placeholder="Search..." v-model="query" autocomplete="off" id="search" />
-      </form>
+      <input
+        type="search"
+        placeholder="What would you learn today?"
+        v-model="query"
+        autocomplete="off"
+        id="search"
+      />
+    </div>
+    <!-- line break -->
+    <div>
+      <hr />
     </div>
     <!-- results box -->
-    <div class="results-wrapper p-2">
+    <div class="results-wrapper py-2">
       <ul v-if="articles.length">
         <li v-for="article of articles" :key="article.slug">
-          <NuxtLink :to="`/${article.slug}`">{{ article.title }}</NuxtLink>
+          <p class="sr-link" @click="read(article.slug)">
+            {{ article.title }}
+            <i class="fa fa-arrow-circle-o-right ml-1 text-sm" />
+          </p>
         </li>
       </ul>
     </div>
@@ -17,6 +28,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -24,7 +37,16 @@ export default {
       articles: []
     };
   },
-  methods: {},
+  methods: {
+    read(url) {
+      //close the modal on click of link
+      let data = {};
+      data.searchModal = false;
+      this.$store.dispatch("setData", data);
+      //redirect to the url
+      window.$nuxt.$router.push(`/${url}`);
+    }
+  },
   watch: {
     async query(query) {
       if (!query) {
@@ -44,6 +66,9 @@ export default {
 </script>
 <style lang="postcss" scoped>
 input {
-  @apply w-full h-12 rounded focus:outline-none text-xl px-4 shadow;
+  @apply w-full h-12 rounded focus:outline-none text-gray-500 text-xl px-1 py-4;
+}
+.sr-link {
+  @apply bg-gray-100 text-gray-900 text-sm rounded px-4 py-3 my-2 transform transition ease-in duration-200 cursor-pointer hover:bg-rd-theme hover:text-white;
 }
 </style>

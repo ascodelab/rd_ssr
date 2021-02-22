@@ -2,15 +2,12 @@
   <div class="overflow-x-hidden">
     <!-- Header Component -->
     <Header />
-    <section v-if="searchModal">
-      <search-modal></search-modal>
-    </section>
     <div>
       <Nuxt />
     </div>
     <!-- footer component -->
     <!-- color mode -->
-    <ColorMode></ColorMode>
+    <floating-menu />
     <Footer />
   </div>
 </template>
