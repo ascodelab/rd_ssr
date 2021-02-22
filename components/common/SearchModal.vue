@@ -61,6 +61,6 @@ export default {
   @apply px-4 pt-5 pb-4 sm:p-6 sm:pb-4;
 }
 .modal-footer {
-  @apply text-rd-theme py-2 text-xs sm:px-6 sm:flex sm:flex-row-reverse;
+  @apply text-rd-theme py-2 text-xs px-6 flex flex-row-reverse;
 }
 </style>
