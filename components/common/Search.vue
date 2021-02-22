@@ -14,7 +14,7 @@
       <hr />
     </div>
     <!-- results box -->
-    <div class="results-wrapper py-2">
+    <div class="results-wrapper py-2 md:max-h-80 overflow-scroll">
       <ul v-if="articles.length">
         <li v-for="article of articles" :key="article.slug">
           <p class="sr-link" @click="read(article.slug)">
@@ -57,7 +57,7 @@ export default {
       this.articles = await this.$content("posts")
         .only(["title", "slug"])
         .sortBy("createdAt", "asc")
-        .limit(12)
+        .limit(15)
         .search(query)
         .fetch();
     }
