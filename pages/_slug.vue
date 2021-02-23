@@ -133,7 +133,14 @@ export default {
     };
     //set rich-snippet data
     return {
-      script: [{ type: "application/ld+json", json: structuredData }]
+      script: [
+        { type: "application/ld+json", json: structuredData },
+        {
+          hid: "infolinks",
+          src: "//resources.infolinks.com/js/infolinks_main.js",
+          defer: true
+        }
+      ]
     };
   }
 };
