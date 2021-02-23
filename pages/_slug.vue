@@ -90,6 +90,9 @@ export default {
     };
   },
   created() {
+    //infolinks ads
+    var infolinks_pid = 3312746;
+    var infolinks_wsid = 0;
     this.setSEOData();
   },
   methods: {
