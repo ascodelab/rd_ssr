@@ -39,7 +39,6 @@ export default {
     ['@nuxtjs/google-adsense', {
       id: process.env.G_ADSENSE,
       onPageLoad: true,
-
     }]
   ],
   buildModules: [
