@@ -7,6 +7,9 @@ date: 2019-08-06T04:27:56.800Z
 slug : getting-started-with-awake
 featureImage: /uploads/getting-started-hero.jpg
 videoId : YXvZZh6ctvE
+related:
+  prev: null
+  next: light-css-footprint
 ---
 Awake is a Nuxt.js template for generating a beautifully robust static site with blog. sajdjagsdagsdjagsdjgajsdgjasgd gasjgdjasg jasdg jahhsgd gajsdgjasgdja djasgdhjasgd hagsdh asd gdjagsdjagdjsgaj dgjasgjasgdjasgjdga sjdgjagsd jas gjdg asjdgjasgdjasgdj.
 

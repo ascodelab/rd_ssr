@@ -6,6 +6,9 @@ author: Anil Sharma
 date: 2019-08-02T04:27:56.800Z
 slug : resourcegrid-vue
 featureImage: /uploads/resource-grid-hero.jpg
+related:
+  prev: post-markup-and-formatting
+  next: null
 ---
 The `ResourceGrid` powers the grid display of both posts and categories in the Awake template. It's a powerful, fast, and flexible component to grab a grid of any size or content when you need it.
 

@@ -8,7 +8,7 @@ slug : post-markup-and-formatting
 featureImage: /uploads/markup-hero.jpg
 videoId : YXvZZh6ctvE
 related:
-  prev: getting-started-with-awake
+  prev: newsletter-signup
   next: resourcegrid-vue
 ---
 Awake uses the awesome npm package [markdown-it ](https://github.com/markdown-it/markdown-it)by [Vitaly Puzrin](https://github.com/puzrin) to provide a wealth of markup options for your posts
