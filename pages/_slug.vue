@@ -9,7 +9,9 @@
     <!-- social share -->
     <social-share />
     <!-- google adsense -->
-    <ad-article-header />
+    <div class="mt-2 items-center justify-center mx-auto">
+      <adsbygoogle ad-slot="6307618784" />
+    </div>
     <!-- video player -->
     <Video :videoId="article.videoId" />
     <!-- article feature image -->

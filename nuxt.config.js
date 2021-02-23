@@ -37,7 +37,9 @@ export default {
     'vue-social-sharing/nuxt',
     '@nuxtjs/sitemap',
     ['@nuxtjs/google-adsense', {
-      id: process.env.G_ADSENSE
+      id: process.env.G_ADSENSE,
+      onPageLoad: true,
+
     }]
   ],
   buildModules: [
