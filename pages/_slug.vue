@@ -8,6 +8,8 @@
     </section>
     <!-- social share -->
     <social-share />
+    <!-- google adsense -->
+    <ad-article-header />
     <!-- video player -->
     <Video :videoId="article.videoId" />
     <!-- article feature image -->
@@ -25,8 +27,10 @@
         <nuxt-content :document="article" />
       </div>
     </section>
+    <!-- prev next section -->
+    <next-prev />
     <!-- comments -->
-    <Comments></Comments>
+    <Comments />
   </div>
 </template>
 <style lang="postcss">
@@ -99,6 +103,7 @@ export default {
       data.url = `${this.$config.baseURL}${this.article.slug}`;
       data.articlePublishedTime = this.article.date;
       data.author = this.article.author;
+      data.related = this.article.related;
       this.$store.dispatch("setSEO", data);
     }
   },

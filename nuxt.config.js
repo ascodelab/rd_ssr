@@ -19,13 +19,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/img/logo.png' },
       { rel: 'stylesheet', type: "text/css", href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }
     ],
-    script: [
-      {
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        'data-ad-client': process.env.G_ADSENSE,
-        async: true
-      }
-    ]
+    // script: [
+    //   {
+    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+    //     'data-ad-client': process.env.G_ADSENSE,
+    //     async: true
+    //   }
+    // ]
   },
   css: [],
   plugins: ['~/plugins/vov', '~/plugins/disqus'],
@@ -35,7 +35,10 @@ export default {
     'nuxt-fontawesome',
     '@nuxt/content',
     'vue-social-sharing/nuxt',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    ['@nuxtjs/google-adsense', {
+      id: process.env.G_ADSENSE
+    }]
   ],
   buildModules: [
     '@nuxtjs/tailwindcss',
