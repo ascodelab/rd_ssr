@@ -37,12 +37,12 @@
           </li>
           <li>
             <NuxtLink class="header-link" to="about">
-              <i class="fa fa-user-circle-o mr-1" aria-hidden="true"></i>About
+              <i class="fa fa-user mr-1" aria-hidden="true"></i>About
             </NuxtLink>
           </li>
           <li>
             <NuxtLink class="header-link" to="contact">
-              <b>#</b>AskMeTech
+              <i class="fa fa fa-envelope mr-1" aria-hidden="true"></i>Contact
             </NuxtLink>
           </li>
         </ul>
