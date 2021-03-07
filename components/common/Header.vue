@@ -35,11 +35,11 @@
               <fa icon="briefcase" class="mr-1 text-rd-theme dark:text-gray-200"></fa>Portfolio
             </a>
           </li>
-          <li>
+          <!-- <li>
             <NuxtLink class="header-link" to="about">
               <i class="fa fa-user mr-1" aria-hidden="true"></i>About
             </NuxtLink>
-          </li>
+          </li>-->
           <li>
             <NuxtLink class="header-link" to="contact">
               <i class="fa fa fa-envelope mr-1" aria-hidden="true"></i>Contact

@@ -1,12 +1,26 @@
 <template>
-  <div class="wrapper">
-    <ArticleList />
+  <div class="art-lst-bg">
+    <div class="wrapper">
+      <ArticleList />
+    </div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
+.bg-cloud {
+  background-image: url("/img/article-list-bg.jpg");
+  background-repeat: no-repat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
 .wrapper {
   @apply flex justify-center container mx-auto;
+}
+.art-lst-bg {
+  @apply bg-cloud bg-fixed bg-gray-300;
+}
+.dark-mode .art-lst-bg {
+  @apply bg-cloud bg-gray-800;
 }
 </style>
 <!--  JS --->

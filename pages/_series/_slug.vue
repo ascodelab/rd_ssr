@@ -8,32 +8,32 @@
     </section>
     <!-- social share -->
     <social-share />
-    <!-- video player -->
-    <Video :videoId="article.videoId" />
-    <!-- article feature image -->
-    <feature-image :imageURL="article.featureImage" />
-    <!-- post date/author information -->
-    <post-meta
-      :date="datePretty"
-      :cat="article.category"
-      :author="article.author"
-      :content="article.body"
-    />
+    <!-- // LAYOUT FOR PLAYLIST STAR \\-->
+    <div class="grid grid-cols-2 bg-rd-theme pb-6">
+      <div class>
+        <!-- video player -->
+        <Video :videoId="article.videoId" />
+        <!-- article feature image -->
+        <feature-image :imageURL="article.featureImage" />
+        <!-- post date/author information -->
+      </div>
+      <div>
+        <series :seriesName=" seriesName" />
+      </div>
+    </div>
     <!-- article content -->
     <section class="article-content-wrapper">
       <div class="w-full prose prose-sm mx-auto px-2">
         <nuxt-content :document="article" />
       </div>
     </section>
-    <!-- prev next section -->
-    <next-prev />
     <!-- comments -->
     <Comments />
   </div>
 </template>
 <style lang="postcss">
 .article-banner {
-  @apply bg-white flex items-center justify-center p-4 pb-0 text-lg sm:text-3xl;
+  @apply flex items-center justify-center p-4 pb-0 text-lg sm:text-3xl;
 }
 .dark-mode .article-banner {
   @apply bg-gray-800;
@@ -86,7 +86,8 @@ export default {
   async asyncData({ $content, params }) {
     const article = await $content("posts", params.slug).fetch();
     return {
-      article
+      article,
+      seriesName: params.series
     };
   },
   created() {
